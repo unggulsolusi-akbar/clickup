@@ -8,7 +8,7 @@ const program = new Command();
 program
   .name("clickup")
   .description("Tool CLI yang akan memudahkan penggunaan ClickUp")
-  .version("0.0.1");
+  .version("0.0.2");
 
 program
   .command("auth")

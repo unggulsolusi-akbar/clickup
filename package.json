@@ -1,14 +1,14 @@
 {
-  "name": "clickup",
+  "name": "@unggulsolusi-akbar/clickup-cli",
   "module": "index.ts",
   "description": "Tool CLI yang akan memudahkan penggunaan ClickUp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
-  "private": true,
   "main": "./dist/clickup.js",
   "scripts": {
-    "build": "bun build --entrypoints ./clickup.ts --outdir ./dist --target node",
-    "prepublishOnly": "npm run build"
+    "build": "bun build --entrypoints ./clickup.ts --outdir ./dist --target node --shebang",
+    "prepublishOnly": "npm run build",
+    "postbuild": "bun add-shebang.ts"
   },
   "bin": {
     "clickup": "./dist/clickup.js"

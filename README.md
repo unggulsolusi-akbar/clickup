@@ -16,7 +16,7 @@ Tool CLI sederhana dan efisien untuk mempermudah interaksi dengan ClickUp langsu
 ## 🚀 **Instalasi**
 
 ```bash
-npm install -g clickup
+npm i -g @unggulsolusi-akbar/clickup-cli
 ```
 
 ---
