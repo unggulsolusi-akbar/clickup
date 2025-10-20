@@ -1,0 +1,42 @@
+{
+  "name": "clickup",
+  "module": "index.ts",
+  "description": "Tool CLI yang akan memudahkan penggunaan ClickUp",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "main": "./dist/clickup.js",
+  "scripts": {
+    "build": "bun build --entrypoints ./clickup.ts --outdir ./dist --target node",
+    "prepublishOnly": "npm run build"
+  },
+  "bin": {
+    "bandha": "./dist/bandha.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "ClickUp"
+  ],
+  "author": "akbaraditamasp <akbar@unggulsolusi.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unggulsolusi-akbar/clickup.git"
+  },
+  "homepage": "https://github.com/unggulsolusi-akbar/clickup",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@inquirer/input": "^4.2.5",
+    "@inquirer/prompts": "^7.9.0",
+    "commander": "^14.0.1",
+    "moment": "^2.30.1",
+    "puppeteer": "^24.24.1"
+  }
+}
