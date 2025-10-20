@@ -1,5 +1,10 @@
 import type { Browser, Page } from "puppeteer";
 import puppeteer from "puppeteer";
+import { fileURLToPath } from "node:url";
+import { dirname, resolve } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default class Puppeteer {
   private static intiated = false;
@@ -9,7 +14,7 @@ export default class Puppeteer {
     if (this.intiated) return;
     this.browser = await puppeteer.launch({
       headless,
-      userDataDir: "./profile",
+      userDataDir: resolve(__dirname, "..", "profile"),
       args: ["--start-maximized"],
       defaultViewport: null,
     });
